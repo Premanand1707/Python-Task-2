@@ -1,0 +1,29 @@
+# Function to find the longest common substring between two strings
+def longest_common_substring(s1, s2):
+    # Initialize variables to store the longest common substring
+    longest_substr = ""
+    # Loop through each character in s1
+    for i in range(len(s1)):
+        # Loop through each character in s2
+        for j in range(len(s2)):
+            # Initialize a temporary substring
+            temp_substr = ""
+            # Check for matching characters starting at s1[i] and s2[j]
+            k = 0
+            while (i + k < len(s1) and j + k < len(s2) and s1[i + k] == s2[j + k]):
+                temp_substr += s1[i + k]
+                k += 1
+            # Update the longest substring if the temporary one is longer
+            if len(temp_substr) > len(longest_substr):
+                longest_substr = temp_substr
+    return longest_substr
+
+# Input strings
+s1 = "JavaProgramming"
+s2 = "PythonProgramming"
+
+# Call the function and store the result
+result = longest_common_substring(s1, s2)
+
+# Print the result
+print(f"The longest common substring between '{s1}' and '{s2}' is: '{result}'")
