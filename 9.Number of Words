@@ -1,0 +1,21 @@
+def count_letters(input_string):
+    # Initialize a variable to store the count of letters
+    letter_count = 0
+
+    # Loop through each character in the input string
+    for char in input_string:
+        # Check if the character is a letter
+        if char.isalpha():
+            letter_count += 1
+
+    # Return the total count of letters
+    return letter_count
+
+# Input string
+input_string = "GuviGeeksNetworkPrivateLimited"
+
+# Call the function and store the result
+result = count_letters(input_string)
+
+# Print the result
+print(f"Total letters in '{input_string}': {result}")
