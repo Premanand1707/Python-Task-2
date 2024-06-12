@@ -1,0 +1,16 @@
+# Define a function to check if a string is a palindrome
+def is_palindrome(s):
+    # Convert the string to lowercase to make the check case-insensitive
+    s = s.lower()
+
+    # Compare the string with its reverse
+    return s == s[::-1]
+
+# Input string
+input_string = "Rotator"
+
+# Call the function and store the result
+result = is_palindrome(input_string)
+
+# Print the result
+print(f"Is the string '{input_string}' a palindrome? {result}")
