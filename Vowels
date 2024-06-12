@@ -1,0 +1,25 @@
+input_string = "Guvi Geeks Network Private Limited"
+
+# Convert the input string to uppercase to make the counting case-insensitive
+input_string = input_string.upper()
+
+# Initialize a dictionary to store the count of each vowel
+vowel_counts = {'A': 0, 'E': 0, 'I': 0, 'O': 0, 'U': 0}
+
+total_vowels = 0
+
+# Loop through each character in the input string
+for char in input_string:
+    # Check if the character is a vowel
+    if char in vowel_counts:
+        # Increment the count for the vowel in the dictionary
+        vowel_counts[char] += 1
+        # Increment the total number of vowels
+        total_vowels += 1
+
+# Print the total number of vowels
+print(f"Total number of vowels: {total_vowels}")
+
+# Print the count of each individual vowel
+for vowel, count in vowel_counts.items():
+    print(f"Count of {vowel}: {count}")
