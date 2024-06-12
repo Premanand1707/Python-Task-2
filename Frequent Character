@@ -1,0 +1,33 @@
+# Function to find the most frequent character in a string
+def most_frequent_char(input_string):
+    # Create a dictionary to store the frequency of each character
+    char_count = {}
+
+    # Count frequency of each character in the input string
+    for char in input_string:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+    # Initialize variables to store the most frequent character and its count
+    most_freq_char = ""
+    max_count = 0
+
+    # Find the most frequent character
+    for char, count in char_count.items():
+        if count > max_count:
+            max_count = count
+            most_freq_char = char
+
+    return most_freq_char
+
+
+# Input string
+input_string = "GuviGeeksNetworkPrivateLimited"
+
+# Call the function and store the result
+result = most_frequent_char(input_string)
+
+# Print the result
+print(f"The most frequent character in '{input_string}' is '{result}'")
