@@ -1,0 +1,18 @@
+input_string = "GuviGeeksNetworkPrivateLimited"
+
+# Initialize a set to store unique characters
+unique_characters = set()
+
+# Loop through each character in the input string
+for char in input_string:
+    unique_characters.add(char)
+
+# The number of unique characters is the size of the set
+number_of_unique_characters = len(unique_characters)
+
+# Print the number of unique characters
+print("Original string:", input_string)
+print("Number of unique characters:", number_of_unique_characters)
+
+# Print all the unique characters
+print("Unique characters:", unique_characters)
