@@ -1,0 +1,18 @@
+input_string = "Guvi Geeks Network Private Limited"
+
+# Define a string containing all the vowels (both uppercase and lowercase)
+vowels = "AEIOUaeiou"
+
+# Initialize an empty string to store the result
+result_string = ""
+
+# Loop through each character in the input string
+for char in input_string:
+    # Check if the character is not a vowel
+    if char not in vowels:
+        # Append the character to the result string
+        result_string += char
+
+# Print the result string
+print("Original string:", input_string)
+print("String without vowels:", result_string)
